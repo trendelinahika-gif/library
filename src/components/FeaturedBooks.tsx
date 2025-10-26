@@ -139,6 +139,22 @@ const FeaturedBooks = () => {
     })
   }
 
+  const handleShareBook = (book: Book) => {
+    if (navigator.share) {
+      navigator.share({
+        title: book.title,
+        text: `Check out "${book.title}" by ${book.author}`,
+        url: window.location.href
+      }).catch(() => {
+        // User cancelled or error occurred
+      })
+    } else {
+      // Fallback for browsers that don't support Web Share API
+      navigator.clipboard.writeText(`${book.title} by ${book.author} - ${window.location.href}`)
+      alert('Book link copied to clipboard!')
+    }
+  }
+
   const handleViewDetails = (bookId: string, bookTitle: string) => {
     // In a real app, this could track analytics or perform additional actions
     console.log(`Viewing details for book: ${bookTitle} (ID: ${bookId})`)
