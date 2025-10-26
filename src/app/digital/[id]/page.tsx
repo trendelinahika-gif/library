@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Search, Filter, BookOpen, Star, Heart, Share2, Download, Play, FileText, Image, Music } from 'lucide-react'
+import { ArrowLeft, Search, Filter, BookOpen, Star, Heart, Share2, Download, Play, FileText, Image, Music, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import ImageComponent from 'next/image'
 
