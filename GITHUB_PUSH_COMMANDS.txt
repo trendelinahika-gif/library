@@ -1,0 +1,16 @@
+# Commands to push to GitHub
+
+# Replace YOUR_USERNAME and YOUR_REPO with your actual GitHub username and repository name
+
+# Add the remote repository
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+
+# Verify the remote was added
+git remote -v
+
+# Push to GitHub (first time)
+git push -u origin main
+
+# If you get an error about 'master' branch, try:
+git branch -M main
+git push -u origin main
